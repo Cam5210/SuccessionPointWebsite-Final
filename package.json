@@ -1,0 +1,10 @@
+{
+  "name": "bizpage-website",
+  "version": "1.0.0",
+  "description": "BizPage website",
+  "scripts": {
+    "dev": "echo 'Static site - no dev server needed'",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "private": true
+}
