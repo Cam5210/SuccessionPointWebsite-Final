@@ -1,6 +1,17 @@
 {
+  "version": 2,
+  "public": true,
+  "cleanUrls": true,
+  "trailingSlash": false,
   "outputDirectory": ".",
   "buildCommand": "",
-  "devCommand": "",
-  "installCommand": ""
+  "headers": [
+    {
+      "source": "/assets/:all*",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
 }
+
