@@ -161,7 +161,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 120px;
+  max-height: 150px;
   margin-right: 8px;
 }
 
@@ -847,17 +847,23 @@ section,
   .hero h2 {
     font-size: 30px;
   }
+  
+  .hero p {
+    max-width: 90%;
+  }
 }
 
 .hero p {
   animation: fadeInDown 1s both 0.2s;
+  max-width: 800px;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {
 
   .hero h2,
   .hero p {
-    max-width: 60%;
+    max-width: 800px;
   }
 }
 
@@ -1588,7 +1594,7 @@ section,
 }
 
 .modern-form button[type="submit"] {
-  background: linear-gradient(135deg, var(--accent-color) 0%, #0056b3 100%);
+  background: #00d9ff;
   border: none;
   color: white;
   font-weight: 600;
