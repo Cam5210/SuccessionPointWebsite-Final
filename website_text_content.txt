@@ -17,7 +17,7 @@ HEADER/NAVIGATION:
 HERO SECTION CAROUSEL:
 Slide 1:
 - Headline: "Succession Expertise for Financial Advisors"
-- Subtext: "As the premier M&A Wealth Management consulting firm, Succession Point helps Wealth Managers navigate the most attractive Monetization, Succession, Acquisition and Growth Recent Offers in the industry today."
+- Subtext: "As the premier M&A Wealth Management consulting firm, Succession Point helps Wealth Managers navigate the most attractive Monetization, Succession, Acquisition and Strategic Growth Partnerships in the industry today."
 
 Slide 2:
 - Headline: "Building Generational Wealth"
