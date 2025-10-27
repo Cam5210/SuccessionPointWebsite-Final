@@ -207,13 +207,52 @@
       </div>
     </section>
 
+    <!-- Filter Section -->
+    <section id="offers-filter" class="section" style="padding-top: 0; padding-bottom: 20px;">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); border: 2px solid rgba(0, 217, 255, 0.3); border-radius: 12px; padding: 25px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);">
+              <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label for="sortSelect" style="font-weight: 600; color: #212529; margin-bottom: 8px; display: block;">
+                    <i class="bi bi-filter-circle" style="color: #00d9ff; margin-right: 8px;"></i>Sort Offers By:
+                  </label>
+                  <select id="sortSelect" class="form-select" style="border: 2px solid rgba(0, 217, 255, 0.3); border-radius: 8px;">
+                    <option value="default">Default Order</option>
+                    <option value="aum-desc">AUM: Highest to Lowest</option>
+                    <option value="aum-asc">AUM: Lowest to Highest</option>
+                    <option value="revenue-desc">Revenue: Highest to Lowest</option>
+                    <option value="revenue-asc">Revenue: Lowest to Highest</option>
+                    <option value="multiple-desc">Multiple: Highest to Lowest</option>
+                    <option value="multiple-asc">Multiple: Lowest to Highest</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="aumFilter" style="font-weight: 600; color: #212529; margin-bottom: 8px; display: block;">
+                    <i class="bi bi-search" style="color: #00d9ff; margin-right: 8px;"></i>Find Similar AUM:
+                  </label>
+                  <div class="input-group">
+                    <span class="input-group-text" style="background: white; border: 2px solid rgba(0, 217, 255, 0.3); border-right: none;">$</span>
+                    <input type="text" id="aumFilter" class="form-control" placeholder="Enter your AUM (e.g., 100)" style="border: 2px solid rgba(0, 217, 255, 0.3); border-left: none; border-right: none;">
+                    <span class="input-group-text" style="background: white; border: 2px solid rgba(0, 217, 255, 0.3); border-left: none; border-radius: 0 8px 8px 0; font-weight: 600; color: #00d9ff;">M</span>
+                  </div>
+                  <small style="color: #6c757d; margin-top: 4px; display: block;">Enter amount in millions (e.g., 100, 500, 1000)</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Recent Offers Grid -->
     <section id="Recent Offers" class="services section">
       <div class="container" data-aos="fade-up">
-        <div class="row gy-4">
+        <div class="row gy-4" id="offersGrid">
 
           <!-- Card 1 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100" data-aum="395000000" data-revenue="3250000" data-multiple="5.93">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -242,8 +281,8 @@
                   <span class="stat-value">$5.79M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple</span>
-                  <span class="stat-value">5.93× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple</span>
+                  <span class="stat-value">5.93×</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
@@ -254,7 +293,7 @@
           </div>
 
           <!-- Card 2 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200" data-aum="115000000" data-revenue="1000000" data-multiple="7.2">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -276,26 +315,26 @@
                 </li>
                 <li class="offer-stat">
                   <span class="stat-label">Upfront (20% sold)</span>
-                  <span class="stat-value">$1.14M</span>
+                  <span class="stat-value">$800k</span>
                 </li>
                 <li class="offer-stat">
                   <span class="stat-label">Event Earnout Projection</span>
-                  <span class="stat-value">$12.76M</span>
+                  <span class="stat-value">$6.4M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple (% sold)</span>
-                  <span class="stat-value">13.9× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple (Total 60% sold)</span>
+                  <span class="stat-value">7.2×</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
-                  <span class="stat-value">$13.9M</span>
+                  <span class="stat-value">$7.2M</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300" data-aum="736000000" data-revenue="5300000" data-multiple="7.07">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -328,8 +367,8 @@
                   <span class="stat-value">$8.7M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple</span>
-                  <span class="stat-value">7.07× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple</span>
+                  <span class="stat-value">7.07×</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
@@ -340,7 +379,7 @@
           </div>
 
           <!-- Card 4 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400" data-aum="1000000000" data-revenue="8000000" data-multiple="7.18">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -373,8 +412,8 @@
                   <span class="stat-value">$13.2M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple</span>
-                  <span class="stat-value">7.18× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple</span>
+                  <span class="stat-value">7.18x</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
@@ -385,7 +424,7 @@
           </div>
 
           <!-- Card 5 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500" data-aum="305000000" data-revenue="2400000" data-multiple="8.1">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -411,11 +450,11 @@
                 </li>
                 <li class="offer-stat">
                   <span class="stat-label">Event Earnout Projection</span>
-                  <span class="stat-value">$17.92M</span>
+                  <span class="stat-value">$14.92M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple (55% sold)</span>
-                  <span class="stat-value">8.1× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple (Total 55% sold)</span>
+                  <span class="stat-value">8.1×</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
@@ -426,7 +465,7 @@
           </div>
 
           <!-- Card 6 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600" data-aum="4300000000" data-revenue="24000000" data-multiple="5.4">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -455,8 +494,8 @@
                   <span class="stat-value">$115.2M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple (50% sold)</span>
-                  <span class="stat-value">5.4× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple (50% sold)</span>
+                  <span class="stat-value">5.4x</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
@@ -467,7 +506,7 @@
           </div>
 
           <!-- Card 7 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700" data-aum="300000000" data-revenue="2550000" data-multiple="6.51">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -500,8 +539,8 @@
                   <span class="stat-value">$3.82M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple</span>
-                  <span class="stat-value">6.51× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple</span>
+                  <span class="stat-value">6.51x</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
@@ -512,7 +551,7 @@
           </div>
 
            <!-- Card 8 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="800" data-aum="85000000" data-revenue="730000" data-multiple="6.56">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -537,27 +576,27 @@
                   <span class="stat-value">$383K</span>
                 </li>
                 <li class="offer-stat">
-                  <span class="stat-label">Event Earnout Projection (30% sold)</span>
+                  <span class="stat-label">Event Earnout Projection</span>
                   <span class="stat-value">$3.01M</span>
                 </li>
                 <li class="offer-stat">
                   <span class="stat-label">Sell Remainder</span>
-                  <span class="stat-value">$475K</span>
+                  <span class="stat-value">$1.4M</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple (100% sold)</span>
-                  <span class="stat-value">4.77× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple (Total 100% sold)</span>
+                  <span class="stat-value">6.56x</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
-                  <span class="stat-value">$3.49M</span>
+                  <span class="stat-value">$4.79M</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <!-- Card 9 -->
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="900" data-aum="60000000" data-revenue="450000" data-multiple="3.27">
             <div class="offer-card">
               <div class="offer-header">
                 <div class="offer-icon">
@@ -586,12 +625,12 @@
                   <span class="stat-value">$292.5K</span>
                 </li>
                 <li class="offer-stat stat-highlight">
-                  <span class="stat-label">Multiple</span>
-                  <span class="stat-value">3.27× Top Line Revenue</span>
+                  <span class="stat-label">Revenue Multiple</span>
+                  <span class="stat-value">3.27x</span>
                 </li>
                 <li class="offer-stat stat-highlight">
                   <span class="stat-label">All‑In Offer Value</span>
-                  <span class="stat-value">$1.147M</span>
+                  <span class="stat-value">$1.47M</span>
                 </li>
               </ul>
             </div>
@@ -709,6 +748,125 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!-- Offers Sorting and Filtering Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const grid = document.getElementById('offersGrid');
+      const sortSelect = document.getElementById('sortSelect');
+      const aumFilter = document.getElementById('aumFilter');
+      let cards = Array.from(grid.children);
+
+      // Parse AUM input - automatically treats input as millions
+      function parseAUM(input) {
+        input = input.trim().toUpperCase();
+        let value = parseFloat(input);
+        if (isNaN(value)) return null;
+        
+        // If input contains B, K, or M, parse accordingly
+        if (input.includes('B')) {
+          return value * 1000000000;
+        } else if (input.includes('K')) {
+          return value * 1000;
+        } else {
+          // Default: treat as millions (since we have the M suffix in UI)
+          return value * 1000000;
+        }
+      }
+
+      // Sort and render cards
+      function sortCards(sortType) {
+        let sortedCards = [...cards];
+        
+        switch(sortType) {
+          case 'aum-desc':
+            sortedCards.sort((a, b) => parseFloat(b.dataset.aum) - parseFloat(a.dataset.aum));
+            break;
+          case 'aum-asc':
+            sortedCards.sort((a, b) => parseFloat(a.dataset.aum) - parseFloat(b.dataset.aum));
+            break;
+          case 'revenue-desc':
+            sortedCards.sort((a, b) => parseFloat(b.dataset.revenue) - parseFloat(a.dataset.revenue));
+            break;
+          case 'revenue-asc':
+            sortedCards.sort((a, b) => parseFloat(a.dataset.revenue) - parseFloat(b.dataset.revenue));
+            break;
+          case 'multiple-desc':
+            sortedCards.sort((a, b) => parseFloat(b.dataset.multiple) - parseFloat(a.dataset.multiple));
+            break;
+          case 'multiple-asc':
+            sortedCards.sort((a, b) => parseFloat(a.dataset.multiple) - parseFloat(b.dataset.multiple));
+            break;
+          default:
+            // Default order - restore original
+            sortedCards = [...cards];
+        }
+        
+        // Remove all cards and re-append in sorted order
+        sortedCards.forEach(card => {
+          grid.appendChild(card);
+        });
+      }
+
+      // Find similar AUM
+      function findSimilarAUM(targetAUM) {
+        if (!targetAUM) {
+          sortCards('default');
+          // Remove any highlight classes
+          cards.forEach(card => {
+            card.style.order = '';
+            card.querySelector('.offer-card').style.boxShadow = '';
+            card.querySelector('.offer-card').style.border = '';
+          });
+          return;
+        }
+
+        // Sort by closest to target AUM
+        let sortedCards = [...cards].sort((a, b) => {
+          const diffA = Math.abs(parseFloat(a.dataset.aum) - targetAUM);
+          const diffB = Math.abs(parseFloat(b.dataset.aum) - targetAUM);
+          return diffA - diffB;
+        });
+
+        // Highlight the closest match
+        cards.forEach(card => {
+          card.querySelector('.offer-card').style.boxShadow = '';
+          card.querySelector('.offer-card').style.border = '2px solid rgba(0, 217, 255, 0.25)';
+        });
+
+        // Highlight top 3 closest matches
+        sortedCards.slice(0, 3).forEach((card, index) => {
+          if (index === 0) {
+            card.querySelector('.offer-card').style.border = '3px solid #00d9ff';
+            card.querySelector('.offer-card').style.boxShadow = '0 0 20px rgba(0, 217, 255, 0.4)';
+          } else {
+            card.querySelector('.offer-card').style.border = '2px solid rgba(0, 217, 255, 0.6)';
+          }
+        });
+
+        // Re-append in order of similarity
+        sortedCards.forEach(card => {
+          grid.appendChild(card);
+        });
+      }
+
+      // Event listeners
+      sortSelect.addEventListener('change', function() {
+        aumFilter.value = ''; // Clear AUM filter when using sort
+        sortCards(this.value);
+      });
+
+      aumFilter.addEventListener('input', function() {
+        const targetAUM = parseAUM(this.value);
+        if (this.value === '') {
+          sortCards('default');
+        } else if (targetAUM) {
+          sortSelect.value = 'default'; // Reset sort dropdown
+          findSimilarAUM(targetAUM);
+        }
+      });
+    });
+  </script>
 
 </body>
 
